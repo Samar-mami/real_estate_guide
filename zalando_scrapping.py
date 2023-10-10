@@ -19,7 +19,7 @@ if page.status_code == 200:
     contents = soup.contents
     print(f'Title: {title.text}')
     print(f'Body: {contents.}')
-
+    #TEstr code
     # You can explore the HTML structure of the page and extract other information as needed
 
 else:
