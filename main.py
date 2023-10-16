@@ -1,5 +1,7 @@
 # This is a sample Python script.
-
+from construct_url import define_search_parameters, construct_url_from_parameters
+from data_collection_zalando_scrapping import scrap_website, find_product_links, get_products_details, \
+    get_price_products, get_brand_products
 # Press Maj+F10 to execute it or replace it with your code.
 # Press Double Shift to search everywhere for classes, files, tool windows, actions, and settings.
 from df_csv import *
