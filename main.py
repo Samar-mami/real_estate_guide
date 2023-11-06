@@ -1,11 +1,10 @@
 # This is a sample Python script.
 from construct_url import define_search_parameters, construct_url_from_parameters
-from data_collection_zalando_scrapping import scrap_website, find_product_links, get_products_details, \
-    get_price_products, get_brand_products
-# Press Maj+F10 to execute it or replace it with your code.
-# Press Double Shift to search everywhere for classes, files, tool windows, actions, and settings.
+from data_collection_zalando_scrapping import *
 from df_csv import *
+from data_storage_s3 import *
 import boto3
+
 
 def print_hi(name):
     # Use a breakpoint in the code line below to debug your script.
@@ -24,14 +23,10 @@ if __name__ == '__main__':
     print(len(filtered_links))
     soups = get_products_details(filtered_links)
     prices = get_price_products(soups)
-    print('prices: ', prices)
-    print(len(prices))
     brands = get_brand_products(soups)
-    print('brands: ', brands)
-    print(len(brands))
     print('filtered_links: ', filtered_links)
-    print(len(filtered_links))
     products = create_df_from_links(brands, prices, filtered_links)
-    print(type(products))
     # filepath = r'C:\Users\Jean-francois\Desktop\shopping_guide\zalando.csv'
-    store_df_to_csv(r'C:\Users\Jean-francois\Desktop\shopping_guide\zalando.csv', products)
+    bucket = 'shopping-guide-sm'
+    filename = 'zalando'
+    store_csv_to_s3(bucket, products, filename)
