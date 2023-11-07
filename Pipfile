@@ -5,7 +5,14 @@ name = "pypi"
 
 [packages]
 dotenv = "*"
-
+re = "*"
+requests = "*"
+bs4 = "*"
+os = "*"
+boto3 = "*"
+python-dotenv = "*"
+io = "*"
+boto3 = "*"
 [dev-packages]
 
 [requires]

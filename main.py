@@ -13,7 +13,7 @@ def print_hi(name):
 
 # Press the green button in the gutter to run the script.
 if __name__ == '__main__':
-    print_hi('PyCharm')
+    print_hi('Welcome to my shopping guide !')
     search_parameters = define_search_parameters()
     print("Search parameters:", search_parameters)
     url = construct_url_from_parameters(search_parameters)
