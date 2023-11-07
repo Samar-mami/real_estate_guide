@@ -3,8 +3,9 @@ from construct_url import define_search_parameters, construct_url_from_parameter
 from data_collection_zalando_scrapping import *
 from df_csv import *
 from data_storage_s3 import *
-import boto3
 
+
+# import pytest
 
 def print_hi(name):
     # Use a breakpoint in the code line below to debug your script.

@@ -18,4 +18,3 @@ def store_df_to_csv(df, filepath):
     df.to_csv(filepath, index=False)
     return csv_buffer
 
-
