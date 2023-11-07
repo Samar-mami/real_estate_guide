@@ -4,7 +4,7 @@ requests
 bs4
 os
 boto3
-dotenv
+python-dotenv
 io
 pandas
 boto3
