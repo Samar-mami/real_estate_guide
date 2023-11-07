@@ -1,0 +1,10 @@
+json
+re
+requests
+bs4
+os
+boto3
+dotenv
+io
+pandas
+boto3
